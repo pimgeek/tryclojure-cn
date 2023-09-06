@@ -38,7 +38,7 @@
         nil)
       [:span {:class ["px-2"
                       (when (= type :error) "text-red-400")
-                      (when (= type :special) "text-gray-500 italic")]}
+                      (when (= type :special) "text-gray-500")]}
        value]])])
 
 (defn repl-view [{:keys [repl-multiline

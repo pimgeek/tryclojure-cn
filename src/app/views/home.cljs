@@ -8,17 +8,18 @@
    [app.tutorial :refer [tutorial]]))
 
 (def intro-title
-  "Got 5 minutes?")
+  "有 5 分钟时间吗？")
 
 (def intro-content
-  "> If you want everything to be familiar, you'll never learn anything new. - Rich Hickey
+  "> 如果你希望一切都感觉熟悉，你就永远学不到新东西。<br>—— Rich Hickey
 
-Let's have some fun! <span id=\"location-of-editor\">Here on the right</span>
-you have a **REPL**, a command line with a _read-eval-print_ loop. Everything
-you write will be evaluated. Try to type some expressions as `(+ 1 2)` or click
-on code to auto insert. You can type `(help)` for more commands.
+让我们做点好玩的事情！
+
+<span id=\"location-of-editor\">注意看右边，这是一个</span> **REPL**，或者说具备 **读取-求值-打印循环** (Read-Eval-Print Loop) 功能的命令行工具。你输入的所有内容都将被求值。
+
+试着输入一些表达式，比如 `(+ 1 2)`，或者直接点击示例代码，它会被自动粘贴到右边 (注：按**回车键 ⏎** 执行)。如果想了解更多命令，可以输入 `(help)`。
    
-Type `(start)` when you're ready!")
+如果你已经准备好，就输入 `(start)` 启动教程吧!")
 
 (defn compute-step
   "Returns a list of `title` and `content`
@@ -125,7 +126,7 @@ Type `(start)` when you're ready!")
   (let [window-width (. js/window -innerWidth)
         location-of-editor-dom (.getElementById js/document "location-of-editor")]
     (set! (. location-of-editor-dom -innerHTML)
-          (if (< window-width 640) "Down below" "Here on the right"))))
+          (if (< window-width 640) "注意看下方，这是一个" "注意看右边，这是一个"))))
 
 (.addEventListener js/window "load" update-location-of-editor)
 (.addEventListener js/window "resize" update-location-of-editor)

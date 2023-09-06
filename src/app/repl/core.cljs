@@ -12,7 +12,7 @@
 ;; Collection of map with the REPL command history.
 (defonce repl-history
   (r/atom [{:type :special
-            :value "Type your Clojure symbolic expressions here"}]))
+            :value "在此处键入您的 Clojure 符号表达式"}]))
 
 ;; Store the REPL input while typed in the input el
 (defonce repl-input (r/atom nil))
@@ -80,7 +80,7 @@
   []
   (session/set! :tutorial true) ; activate the tutorial
   (session/set! :step 0)
-  "Tutorial started!")
+  "Clojure 教程已开始运行！")
 
 (defn clear-repl
   "Delete all the repl history."

@@ -41,20 +41,19 @@
         :clip-rule "evenodd"
         :fill-rule "evenodd"}]]]
     (when DEBUG
-      [:a {:class ["mx-2" "text-gray-400" "hover:text-white" "underline-none"]
+      [:a {:class ["mx-2" "text-gray-400" "hover:text-blue-400" "underline-none"]
            :href "#/all"}
-       (string/capitalize "all")])]])
+       (string/capitalize "单页显示")])]])
 
 (defn footer []
   [:div {:class []}
-   [:p {:class ["text-sm" "text-gray-700" "dark:text-gray-500" "text-center"
-                "italic" "mb-4"]}
-    "Created with Clojurescript by "
+   [:p {:class ["text-sm" "text-gray-700" "dark:text-gray-500" "text-center" "mb-4"]}
+    "本教程由 "
     [:a {:href "https://www.scotto.me" :target "_blank"}
      "Elia Scotto"]
-    ", thanks to " 
+    " 使用 ClojureScript 构建，感谢 "
     [:a {:href "https://github.com/borkdude" :target "_blank"}
      "Michiel Borkent"]
-    " and the amazing Clojure "
+    " 和令人惊叹的 Clojure "
     [:a {:href "https://clojure.org/community/resources" :target "_blank"}
-     "community"] "."]])
+     "开发者社区"]]])
